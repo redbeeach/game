@@ -1,0 +1,252 @@
+<html>
+	<head>
+		<title>Space Shooter</title>
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<link rel="stylesheet" href="css/basic.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <!--키 감지 & 플레이-->
+    	<script type="text/javascript" src="js/sound.js"></script>
+    	<script type="text/javascript" src="js/bgm.js"></script>
+    	
+<style type="text/css">
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('img/hi.gif') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+	
+#game{
+    position: relative;
+    width: 900px;
+}
+	
+.container:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    _background: rgba(0,0,0,0.5);
+}
+.bottomElem {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+}        
+            
+            
+            
+.alert {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 50;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+.start-message {
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 130px;
+    margin-left: -150px;
+    margin-top: -70px;
+    padding-top: 15px;
+}
+.end-message,
+.clear-message {
+    display: none;
+    width: 900px;
+    height: 750px;
+    box-sizing: border-box;
+}
+.message {
+    display: block;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.15;
+}
+.replay {
+    margin-top: 23%;
+}
+.guide-message {
+    font-size: 15px;
+    display: block;
+    font-weight: normal;
+    color: white;
+    margin-top: 14px;
+}
+
+/* clear message */
+.clear {
+    margin-top: 21%;
+}
+	
+.next-stage {
+    display: block;
+    width: 150px;
+    height: 2rem;
+    margin: 14px auto;
+    border: 1px solid white;
+    color: white;
+    line-height: 2;
+    text-decoration: none;
+}
+.next-stage:hover {
+    text-decoration: underline;
+}
+
+input.onoff {
+    position: absolute;
+    left: -000%;
+    opacity: 0;
+}
+
+input.onoff+label {
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    z-index: 30;
+}
+
+input.onoff+label:before {
+    content: url(src/image/on.png);
+    width: 56px;
+    height: 56px;
+}
+
+input.onoff:checked+label:before {
+    content: url(src/image/off.png);
+}
+
+.life {
+    z-index: 40;
+}  
+	
+	
+/*게임시작 말풍선*/
+.howtoplay {
+    position: absolute;
+    left: 31px;
+    top: 260px;
+    width: 150px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    background: url(img/howtoplay.png) no-repeat center;
+    background-size: contain;
+    border-radius: 20px;
+    
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}            
+		
+</style>
+<script>
+	//------헤더,푸터 로드-----//
+       	$(function(){
+            $("header").load("head.html");
+            $("footer").load("foot.html");
+        });
+	
+
+		$(function () { 
+		window.addEventListener(
+			"keydown", checkKeyPress, false);
+
+		function checkKeyPress(key) {
+			if (key.keyCode == "32") {
+				event.preventDefault();
+	//            alert("aaaa");
+			} 
+			else if (event.keyCode==38 || event.keyCode==40){
+				event.preventDefault();
+			} 
+			else if (event.keyCode==37 || event.keyCode==39){
+				event.preventDefault();
+			} 
+		}
+	});
+</script>
+
+
+</head>
+	<body>
+    <header></header>
+    
+	    <div class="container">
+			<div id="game">
+			<!-- 배경음-->
+			   <input type="checkbox" id="onoff" class="onoff" name="b1" onchange="myfunction(this);" >
+				<label for="onoff" ></label> 
+
+			   <div class="howtoplay">방향키로 이동하며<br>A로 총을 쏘세요!</div>
+			</div>
+
+			<!-- start -->
+			<div class="alert start-message">
+				<span class="message">STAGE 1</span><span style="font-size: 20px;">START</span>
+				<span class="guide-message">SPACE 눌러 게임을 시작하세요.</span>
+			</div>
+
+			<!-- end -->
+			<div class="alert end-message">
+				<span class="message replay">GAME OVER! TRY AGAIN!</span>
+				<span class="guide-message">F5를 눌러 게임을 처음부터 다시 시작하세요.</span>
+			</div> 
+
+			<!-- clear -->
+			<div class="alert clear-message">
+				<span class="message clear">GAME CLEAR!</span>
+				<span class="guide-message">버튼을 누르면 다음 스케이지로 이동합니다.</span>
+				<span class="guide-message">다시 시작하려면 F5를 눌러주세요.</span>
+				<a class="next-stage" href="../STAGE2/STAGE2.html">NEXT STAGE</a>
+			</div>
+
+			<audio id="keymovesound">
+			   <source src="soundfx/untitled.mp3" type="audio/mp3">
+
+			</audio> 
+			  <audio id="start">start
+			   <source src="soundfx/start.mp3" type="audio/mp3">
+
+			</audio>
+			 <audio id="gameover">
+			   <source src="soundfx/game_over2.mp3" type="audio/mp3">
+
+			</audio>   
+
+			  <audio id="success">  
+	<!--          추가-->
+			   <source src="soundfx/success.mp3" type="audio/mp3">
+
+			</audio>      
+		</div>
+		
+<footer></footer>
+</body>
+</html>
