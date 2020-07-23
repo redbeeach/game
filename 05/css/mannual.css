@@ -163,7 +163,7 @@
 
 .next img {
 
-    z-index: 1;
+    z-index: 9999;
     position: absolute;
     top: 50%;
     width: 30px;
@@ -171,7 +171,7 @@
 }
 
 .right img {
-    z-index: 1;
+    z-index: 9999;
     position: absolute;
     top: 50%;
     right: 0;
@@ -684,7 +684,16 @@ margin: 0 auto;
     background-size: 100% 100%;
  
 }
+.s1 .item.img0 {
 
+    background: url(../img/ok1/goods/ok1.png) no-repeat;
+    width: 300px;
+    height: 300px;
+       margin: 0 auto;
+
+    background-size: 100% 100%;
+ 
+}
 .s1 .item.img1 {
 
     background: url(../img/ok1/goods/ok2.png) no-repeat;
@@ -710,65 +719,65 @@ margin: 0 auto;
     background-size: 100% 100%;
 }
 
-ok .item.img0 {
+.ok .item.img0 {
     background: url(../img/s1/goods/bag.png) no-repeat;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .ok .item.img1 {
     background: url(../img/s1/goods/mug.png) no-repeat;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .ok .item.img2 {
     background: url(../img/s1/goods/Shirt%20.png) no-repeat;
-     width: 500px;
-    height: 500px;
+     width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .ok .item.img3 {
     background: url(../img/s1/goods/wall%20art.png) no-repeat;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 .helminth .item.img0 {
     background: url(../img/helminth/goods/bag.png) no-repeat;
-      width: 500px;
-    height: 500px;
+      width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .helminth .item.img1 {
     background: url(../img/helminth/goods/mug.png) no-repeat;
-     width: 500px;
-    height: 500px;
+     width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .helminth .item.img2 {
     background: url(../img/helminth/goods/Shirt%20.png) no-repeat;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
 
 .helminth .item.img3 {
     background: url(../img/helminth/goods/wall%20art.png) no-repeat;
-      width: 500px;
-    height: 500px;
+      width: 300px;
+    height: 300px;
        margin: 0 auto;
     background-size: 100% 100%;
 }
