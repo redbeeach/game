@@ -360,7 +360,7 @@ input.sub {
         transition: left 0.7s ease-in-out;
     }
 
-    .nav.opened {
+    .nav-up ul.opened {
         left: 0;
         z-index: 100;
         position: fixed;

@@ -335,24 +335,19 @@ textarea {
         width: 810px
     }
 }
- @media screen and (min-width:701px) and (max-width:899px){
-
-  .movie .movie_detail .main_detail {
-/*      margin: 0 auto;*/
-        width: 700px
+@media (max-width:899px){
+       .movie .movie_detail {
+        width: 300px;
     }
-
+    .list_review .review_info .raking_grade {
+    padding: 17px 0 0 11px;
 }
- @media screen and (min-width:650px) and (max-width:899px){
-
-  .movie .movie_detail .main_detail {
-/*      margin: 0 auto;*/
-        width: 650px
+    .raking_grade .emph_grade{
+        font-size: 14px;
+        line-height: 0px;
     }
-
-}
-@media screen and (min-width:500px) and (max-width:600px){
-       .movie .movie_detail .main_detail {
-        width: 500px
+    .raking_grade .txt_grade{
+        line-height: 28px;
+        font-size: 16px;
     }
 }

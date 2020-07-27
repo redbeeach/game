@@ -7,7 +7,7 @@
     <link rel="icon" href="img/favicon_32x32.png" type="image/x-icon">
     <title>ABOUT_______</title>
     <!--    공용css-->
-    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="../common/css/basic.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/movie.css">
 
@@ -28,44 +28,7 @@
         new WOW().init();
     </script>
 
-    <style>
-        @font-face {
-            font-family: 'vhs font';
-            src: url('css/VCR_OSD_MONO_1.001.ttf') format('truetype');
-            /*폰트 파일 바꾸기*/
-            font-weight: normal;
-            font-style: normal;
-        }
 
-        body {
-            color: white;
-        }
-
-        .page-tit {
-            font-family: 'vhs font';
-            font-size: 100px;
-            text-align: center;
-            margin-top: 250px;
-            margin-bottom: 20px;
-        }
-
-        .page-sub {
-            font-size: 24px;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 420px;
-        }
-
-        .본문 {
-            margin-top: 50px;
-            text-align: center;
-
-            /* 임시 값 ▼ */
-            height: 1000px;
-            width: 1500px;
-            margin: 0 auto;
-        }
-    </style>
     <script>
         $(function() {
             $(".hc_big_img").hide();
@@ -106,7 +69,7 @@
             <div>
                 <div class="hc_big_img hover">
                     <div class="hc_img_box ">
-                        <img src="img/gi.jpg" alt="기생충"></div>
+                        <img src="img/gi.jpg" alt="기생충" class="img01"></div>
                     <div class="hc_title_box">
                         <div class="vod_box">
                             <input type="checkbox" id="popup">
@@ -127,7 +90,7 @@
                 </div>
                 <div class="hc_big_img hover">
                     <div class="hc_img_box">
-                        <img src="img/snow.jpg" alt="설국열차" style="transform: translate(0%, -12%);"></div>
+                        <img src="img/snow.jpg" alt="설국열차" class="img02"></div>
                     <div class="hc_title_box">
                         <div class="vod_box">
                             <input type="checkbox" id="popup1">
@@ -147,13 +110,13 @@
                     </div>
                 </div>
                 <div class="hc_big_img hover">
-                    <div class="hc_img_box"><img src="img/okja-1.jpg" alt="옥자" style="transform: translate(0%, -4%);"></div>
+                    <div class="hc_img_box"><img src="img/okja-2.jpg" alt="옥자" class="img03"></div>
                     <div class="hc_title_box">
                         <div class="vod_box">
                             <input type="checkbox" id="popup2">
                             <label for="popup2"><img src="img/play0.png" alt="" style="width: 70px"></label>
                             <div>
-                                <div style="transform: translate(-50%, -90%);">
+                                <div>
                                     <iframe width="700" height="400" src="https://www.youtube.com/embed/eOdMVj1mnHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <label for="popup2"></label>
                                 </div>
