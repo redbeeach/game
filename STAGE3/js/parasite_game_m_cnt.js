@@ -17,7 +17,7 @@ function restartGame() {
     givenTime = 100;
     startTime = new Date().getTime();
     isGameOver = false;
-    isFirstTime = true;c
+    isFirstTime = true;
     currentLevel = 1;
     monsters = [];
     boxes = [];
@@ -166,7 +166,7 @@ var exitImage = new Image();
 exitImage.src = "img/exit_sprite.png";
 
 var bgImage = new Image();
-bgImage.src = "img/background_sprite1.png";
+bgImage.src = "img/bg_m-01.png";
 
 var teleporterImage = new Image();
 teleporterImage.src = "img/teleporter_sprite.png";
@@ -207,41 +207,41 @@ currY = IMAGE_START_EAST_Y;
 var GAME_MAP = new Array(
     "############################################################",
     "                                                            ",
-    "          F                                                 ",
+    "                                                            ",
     "                                                 E          ",
     "                                           #################",
     "                                       ######               ",
-    "                                 #######                    ",
+    "                                  #######                   ",
     "                                                            ",
     "                                            G               ",
     "                                                            ",
-    "     #####F########  #############                          ",
-    "###  #####                                   ########       ",
+    "     #### ##F########  ##################                   ",
+    "###  ##  ###                                 ########       ",
     "  #                                             ########    ",
-    "  ## #####                       G                          ",
+    "  ## ##  ###                     G                          ",
     "                             G                              ",
     "                         G                                  ",
-    "         #          G              #########################",
-    "                G                ########                ###",
+    "           #          G            #########################",
+    "                  G              ########                ###",
     "      T                       ########                  ####",
-    "#       #                  ########                 ########",
-    "#   ####                ########                            ",
-    "#########                                                   ",
+    "#         #                ########                 ########",
+    "#   ###  #               #######                            ",
+    "#######  ##                                                 ",
     "                                                            ",
     "                                  G                         ",
-    "         ####################                               ",
-    "    ######     ##          ######        G                  ",
+    "           ##################                               ",
+    "    ###  ###     ##        ######        G                  ",
     "##                          ########                        ",
     "###                            ########        G            ",
     "######                            ########                  ",
     "#####                               #########               ",
-    "        ####                            ########            ",
-    "       ############                                         ",
-    "       ############                             G           ",
-    "  P    ########                                             ",
-    "##    #########                        #####################",
-    "###############                    #########################",
-    "########################       #############################",
+    "          ####                          ########            ",
+    "         ############                                       ",
+    "  P      ############                           G           ",
+    "         ########                                           ",
+    "##    #                                #####################",
+    "#######                            #########################",
+    "#######                        #############################",
     "############################################################"
     )
 function initialiseMap() {
@@ -496,7 +496,7 @@ function drawPortals() {
     ctx.drawImage(teleporterImage, 0, 0, 32, 32, portalEnd.x, portalEnd.y-9, 32, 32);
 }
 function drawBackground() {
-    ctx.drawImage(bgImage,0,3, 1500,750,
+    ctx.drawImage(bgImage,0,3, 1200,750,
                 0,0,gameWidth,height);    
 }
 function drawPlayerName() {
@@ -674,14 +674,14 @@ function drawGameOverScreen() {
     ctx.fillRect(0, 0, gameWidth, height);
     ctx.fillStyle = "white";
     ctx.font = "40px Arial";
-    ctx.fillText("GAME OVER! TRY AGAIN!",  510, 360);
+    ctx.fillText("GAME OVER! TRY AGAIN!",  410, 360);
 
     var table = getHighScoreTable();
     //ctx.fillStyle = "";
     ctx.fillRect(0, 0, 0, 0);
     ctx.font = "15px Arial";
     ctx.fillStyle = "white";
-    ctx.fillText("F5를 눌러 게임을 처음부터 다시 시작하세요.", 600, 420);
+    ctx.fillText("F5를 눌러 게임을 처음부터 다시 시작하세요.", 450, 420);
     ctx.font = "0px Arial";
     for(var i=0; i<table.length; i++) {
         var name = table[i].name;

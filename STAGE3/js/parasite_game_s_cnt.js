@@ -94,7 +94,7 @@ var playerInitX = width;
 var playerInitY = height-25;
 var initScore = 0;
 
-var gameWidth = 1500;
+var gameWidth = 900;
 
 var monsters = [];
 var flyingMonser;
@@ -166,7 +166,7 @@ var exitImage = new Image();
 exitImage.src = "img/exit_sprite.png";
 
 var bgImage = new Image();
-bgImage.src = "img/background_sprite1.png";
+bgImage.src = "img/bg_s-01.png";
 
 var teleporterImage = new Image();
 teleporterImage.src = "img/teleporter_sprite.png";
@@ -207,7 +207,7 @@ currY = IMAGE_START_EAST_Y;
 var GAME_MAP = new Array(
     "#############################################",
     "                                             ",
-    "          F                                  ",
+    "                                             ",
     "                                 E           ",
     "                            #################",
     "                       ######                ",
@@ -215,33 +215,33 @@ var GAME_MAP = new Array(
     "                                             ",
     "                             G               ",
     "                                             ",
-    "     ##############  #########               ",
-    "###  #####              ########          #  ",
-    "  #                        ########       #  ",
-    "  ## #####                       G     ##### ",
-    "                             G         ######",
-    "                         G             ######",
-    "         #          G               #########",
-    "                G                ######## ###",
-    "      T                       ########    ###",
-    "#       #                  ########       ###",
-    "#   ####                ########             ",
+    "     #####F############                      ",
+    "###  #####            #########              ",
+    "  #                        ########       ## ",
+    "  ## #####                                ## ",
+    "                             G            ## ",
+    "                         G            #######",
+    "         #          G              ##########",
+    "                G               ######### ###",
+    "      T                      #########    ###",
+    "#       #                 #########       ###",
+    "#   ####              ##########             ",
     "#########                                    ",
-    "       ############                          ",
+    "       #####                                 ",
     "                                             ",
-    "                         G                   ",
-    "         ############                        ",
-    "    ######       ########        G           ",
-    "##                    ######                 ",
-    "###                        #####             ",
-    "######                        ######         ",
-    "#####                             ######     ",
-    "        ####                                 ",
-    "       ####               G                  ",
-    "  P    ####                           #######",
-    "##    ####                         ##########",
-    "##########                     ##############",
-    "##########                 ##################",
+    "     #############       G                   ",
+    "         #############                       ",
+    "    ######       #########       G           ",
+    "##                    #######                ",
+    "###                        ######            ",
+    "######                        #######        ",
+    "#####                                        ",
+    "        ##                                   ",
+    "       ###                G                  ",
+    "  P    ###                                   ",
+    "##    ####                        ###########",
+    "##########                    ###############",
+    "##########                ###################",
     "#############################################"
     )
 function initialiseMap() {
@@ -628,15 +628,15 @@ function handleNextLevel() {
         ctx.fillRect(0, 0, gameWidth, height);
         ctx.fillStyle = "white";
         ctx.font = "40px Arial";
-        ctx.fillText("GAME CLEAR!",  600, 430);
+        ctx.fillText("GAME CLEAR!",  380, 430);
             player.x = 1261;
         var table = getHighScoreTable();
         //ctx.fillStyle = "";
         ctx.fillRect(0, 0, 0, 0);
         ctx.font = "15px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("3초 뒤 'WHO IS HE?'로 이동합니다.", 620, 520);
-        ctx.fillText("다시 시작하려면 F5를 눌러주세요.", 620, 560);
+        ctx.fillText("3초 뒤 'WHO IS HE?'로 이동합니다.",  380, 520);
+        ctx.fillText("다시 시작하려면 F5를 눌러주세요.",  380, 560);
         ctx.font = "0px Arial";
 		        
 //        for(var i=0; i<table.length; i++) {
@@ -674,14 +674,14 @@ function drawGameOverScreen() {
     ctx.fillRect(0, 0, gameWidth, height);
     ctx.fillStyle = "white";
     ctx.font = "40px Arial";
-    ctx.fillText("GAME OVER! TRY AGAIN!",  510, 360);
+    ctx.fillText("GAME OVER! TRY AGAIN!",   380, 360);
 
     var table = getHighScoreTable();
     //ctx.fillStyle = "";
     ctx.fillRect(0, 0, 0, 0);
     ctx.font = "15px Arial";
     ctx.fillStyle = "white";
-    ctx.fillText("F5를 눌러 게임을 처음부터 다시 시작하세요.", 600, 420);
+    ctx.fillText("F5를 눌러 게임을 처음부터 다시 시작하세요.",  380, 420);
     ctx.font = "0px Arial";
     for(var i=0; i<table.length; i++) {
         var name = table[i].name;

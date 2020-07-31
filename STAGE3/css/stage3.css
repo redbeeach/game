@@ -18,9 +18,7 @@ header {width: 1500px; height: 100px; margin: 0 auto; position: relative;}
 .game1 { display: block; margin: 0 auto; margin-top: 0; height: 100vh; }
 .inner {height: 750px;}
 
-input.sub {
-    position: absolute; right: 0; width: 80px;
-} 
+
 
 body {background: url('../img/bg.gif') no-repeat center;    }
 
@@ -73,6 +71,7 @@ body {background: url('../img/bg.gif') no-repeat center;    }
     bottom: 0;
     z-index: 50;
 }
+
 
 
 .game {
@@ -201,6 +200,7 @@ input.onoff:checked+label:before {
     .subscribe {
         right: calc(50vw - 600px);
     }
+ #SplashScreen {margin: 0 auto}   
     /* 헤더 HEADER, 푸터 FOOTER 끝//  */
 }
 
@@ -215,8 +215,7 @@ input.onoff:checked+label:before {
     }
     /* 헤더 HEADER, 푸터 FOOTER 끝//  */
 }
-
-
+   #SplashScreen {position: absolute; left: 7%;}
 /*--- mobile 모바일, tablet 태블릿 ---*/
 @media all and (max-width: 901px){
     

@@ -9,9 +9,7 @@
     <title>ABOUT_______</title>
         <link rel="stylesheet" href="css/stage3.css">
     <link rel="stylesheet" href="../common/css/basic.css">
-    <link rel="stylesheet" media="screen and (min-width: 1500px)" href="STAGE3_l.html" />
-    <link rel="stylesheet" media="screen and (min-width: 902px) and (max-width: 1201px)" href="STAGE3_s.html" />
-
+    
 
     <script type="text/javascript" src="../common/js/jquery-3.4.1.min.js"></script>
     <script>
@@ -28,7 +26,7 @@
     <div class="game game1"><div class="inner">
          
             <div id="SplashScreen" style="border:1px solid #000; width: 1200px; height: 750px; 
-                background-image: url('img/background.png'); 
+                background-image: url('img/bg_m-01.png'); 
                 background-size: 1200px 750px;">
         <div align="center" style = "margin-top:320px; margin-right: 100px; margin-left: 100px;">
             <span class="message">STAGE 3</span><span style="line-height:40px; color:white;font-size: 20px;">START</span>
@@ -56,7 +54,7 @@
         </div>
 -->
         
-<canvas id="canvas" style="border:1px solid #000; display:none" ></canvas>
+<canvas id="canvas" style="border:1px solid #000; display:none; margin: 0 auto;" ></canvas>
 
 <div>
     
@@ -69,7 +67,7 @@
                position:absolute;
                font-weight: 700;
                top:30%;
-               left: 50%;
+               left: 40%;
                transform: translate(-50%, -50%);
                text-align: center;
                opacity:0;
@@ -123,6 +121,7 @@ var s = window.matchMedia("(min-width: 902px) and (max-width: 1201px)")
 myFunctions(s) // Call listener function at run time
 s.addListener(myFunctions) // Attach listener function on state changes
 </script>
+
 <script src="js/parasite_game_m_cnt.js"></script> 
 
 </body>
