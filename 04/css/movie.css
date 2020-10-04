@@ -118,14 +118,14 @@ a {
     float: left;
     padding-left: 10px;
     font-size: 18px;
-    line-height: 15px;
+    line-height: 0px;
     font-weight: bold;
     color: #fff;
 }
 .raking_grade .txt_grade {
     float: left;
     font-size: 18px;
-    line-height: 15px;
+    line-he/ight: 15px;
     color: #989898
 }
 .movie input,
@@ -264,7 +264,8 @@ textarea {
 
 
 .list_review .review_info .link_review {
-    float: left
+    float: left;
+    line-height: 0;
 }
 
 .list_review .review_info .link_profile {
